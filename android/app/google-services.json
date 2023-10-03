@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "957153870328",
+    "project_id": "codestorm-hack",
+    "storage_bucket": "codestorm-hack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957153870328:android:973ebf4fc659a38897560d",
+        "android_client_info": {
+          "package_name": "com.example.codestorm_hackathon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLw9_iIRJZ-1L20qtUEZwF1uFZ6fLdJfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
