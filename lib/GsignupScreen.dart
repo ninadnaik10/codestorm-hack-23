@@ -31,10 +31,16 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
       
+<<<<<<< Updated upstream
             const SizedBox(height: 220),
             
       
               const SizedBox(height: 20),
+=======
+            const SizedBox(height: 20),
+      
+              const SizedBox(height: 220),
+>>>>>>> Stashed changes
       
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -57,6 +63,7 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
       
             const SizedBox(height: 20),
 
+
              Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
@@ -75,6 +82,7 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
                 style: TextStyle(fontSize: 17,color: Colors.white),) ),
               ),
             ),
+<<<<<<< Updated upstream
 
             const SizedBox(height: 30,),
 
@@ -88,6 +96,21 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
             ),
       
             const SizedBox(height: 200),
+=======
+            const SizedBox(height: 30,),
+
+
+            Row(
+              children: [
+                const SizedBox(width: 150,),
+                Image.asset('assets/images/googleicon.png',width: 44,),
+                const SizedBox(width: 15,),
+                Image.asset('assets/images/linkedinicon.png',width: 44,),
+              ],
+            ),
+      
+            const SizedBox(height: 210),
+>>>>>>> Stashed changes
   
       
             // const SizedBox(height: 4),

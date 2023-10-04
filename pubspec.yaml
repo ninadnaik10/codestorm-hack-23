@@ -68,9 +68,15 @@ flutter:
     - assets/images/Godrej_logo.png
     - assets/images/sf.png
     - assets/images/feedback.jpeg
+<<<<<<< Updated upstream
     - assets/images/signup.png
     - assets/images/google.png
     - assets/images/linkedin.png
+=======
+    - assets/images/calling.jpeg
+    - assets/images/googleicon.png
+    - assets/images/linkedinicon.png
+>>>>>>> Stashed changes
     - assets/images/accenture.jpeg
   #   - images/a_dot_ham.jpeg
 

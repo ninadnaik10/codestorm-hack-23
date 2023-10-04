@@ -17,7 +17,7 @@ class _HomepageState extends State<Homepage> {
         children: [
           const SizedBox(height: 5,),
 
-          Center(child: Image.asset('assets/images/accenture.jpeg',height: 200,)),
+          Image.asset('assets/images/accenture.jpeg',height: 230),  
 
           Card(
             margin: EdgeInsets.all(10),
@@ -36,7 +36,7 @@ class _HomepageState extends State<Homepage> {
 
                   
                    const Text('Description : We want you to fill this Survey. This Survey will help us Understand what things can be not going right in the company.',
-                  style: TextStyle(fontWeight: FontWeight.w400,),),
+                  style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
                   const SizedBox(height: 10,),
 
                   Row(
@@ -71,7 +71,7 @@ class _HomepageState extends State<Homepage> {
                   ),),
 
                    const Text('Description : This survey is essentially a check-in, providing a pulse check on topics such as employee satisfaction, job role, communication, relationships, and work environment.',
-                  style: TextStyle(fontWeight: FontWeight.w400,),),
+                  style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
 
                   const SizedBox(height: 10,),
 
@@ -105,7 +105,7 @@ class _HomepageState extends State<Homepage> {
                   ),),
 
                    const Text('Description : We want you to fill this feedback form as quick as possible.',
-                  style: TextStyle(fontWeight: FontWeight.w400,),),
+                  style: TextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
 
                   const SizedBox(height: 10,),
 
@@ -126,4 +126,31 @@ class _HomepageState extends State<Homepage> {
       ),
     );
   }
+}
+
+// ignore: non_constant_identifier_names
+Widget Buildcard(
+  
+) => Container(
+  margin: EdgeInsets.only(left: 20,bottom: 10),
+                    decoration: BoxDecoration
+                (
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color.fromARGB(255, 222, 185, 197),
+                ),
+                  width: 350,
+                  child: Column(
+                    children: [
+                      Expanded(
+                      child: AspectRatio(
+                        aspectRatio: 4/2,
+                        child: ClipRRect(borderRadius: BorderRadius.circular(10),
+                        
+                        ),  
+                    ),
+                  )]
+                  ),
+);
+
+class CardItem {
 }

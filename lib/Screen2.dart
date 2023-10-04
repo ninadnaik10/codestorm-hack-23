@@ -34,6 +34,8 @@ class _Screen2State extends State<Screen2>
               child: const Center(child: Text("ACCENTURE SURVEY APP",
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
+
+            Center(child: Image.asset('assets/images/calling.jpeg')),
       
             const SizedBox(height: 40),
             
@@ -88,7 +90,11 @@ class _Screen2State extends State<Screen2>
               ),
             ),
       
+<<<<<<< Updated upstream
             const SizedBox(height: 210),
+=======
+            const SizedBox(height: 230),
+>>>>>>> Stashed changes
   
       
             // const SizedBox(height: 4),

@@ -45,7 +45,7 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
-        title: Center(child: const Text('Godrej',style: TextStyle(color: Colors.yellowAccent,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal,letterSpacing: 1),)),
+        title: Center(child: const Text('Accenture',style: TextStyle(color: Colors.yellowAccent,fontWeight: FontWeight.bold,fontStyle: FontStyle.normal,letterSpacing: 1),)),
         actions: [IconButton(
           icon: const Icon(Icons.person,color: Colors.black,),
           tooltip: 'Profile',
