@@ -17,7 +17,7 @@ class _HomepageState extends State<Homepage> {
         children: [
           const SizedBox(height: 5,),
 
-          Image.asset('assets/images/Godrej_logo.png',height: 200,),
+          Center(child: Image.asset('assets/images/accenture.jpeg',height: 200,)),
 
           Card(
             margin: EdgeInsets.all(10),

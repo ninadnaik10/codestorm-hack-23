@@ -28,23 +28,25 @@ class _Screen2State extends State<Screen2>
       
           
             Container(
-              height: 270,
+              height: 100,
               width: 400,
               color: Colors.deepPurple,
-              child: const Center(child: Text("GODREJ SURVEY APPLICATION",
+              child: const Center(child: Text("ACCENTURE SURVEY APP",
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
       
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             
-      
+            Center(child: Image.asset('assets/images/signup.png',height: 200,)),
+
+            const SizedBox(height: 20,),
             const Text(
               "    Choose Your Signup :",
               style: TextStyle(
                 fontSize: 20,
               ),),
       
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
       
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -86,7 +88,7 @@ class _Screen2State extends State<Screen2>
               ),
             ),
       
-            const SizedBox(height: 270),
+            const SizedBox(height: 210),
   
       
             // const SizedBox(height: 4),

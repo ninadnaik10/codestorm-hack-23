@@ -24,21 +24,15 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
       
           
             Container(
-              height: 270,
+              height: 100,
               width: 400,
               color: Colors.deepPurple,
               child: const Center(child: Text("SURVEY APPLICATION",
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
       
-            const SizedBox(height: 20),
+            const SizedBox(height: 220),
             
-      
-            const Text(
-              "    Signup Page:",
-              style: TextStyle(
-                fontSize: 20,
-              ),),
       
               const SizedBox(height: 20),
       
@@ -81,8 +75,19 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
                 style: TextStyle(fontSize: 17,color: Colors.white),) ),
               ),
             ),
+
+            const SizedBox(height: 30,),
+
+            Row(
+              children: [
+                const SizedBox(width: 150,),
+                Image.asset('assets/images/google.png',height: 44,),
+                const SizedBox(width: 30,),
+                Image.asset('assets/images/linkedin.png',height: 44,),
+              ],
+            ),
       
-            const SizedBox(height: 270),
+            const SizedBox(height: 200),
   
       
             // const SizedBox(height: 4),
