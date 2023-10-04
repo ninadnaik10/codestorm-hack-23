@@ -4,58 +4,58 @@ class ItemModel {
   static final items = [
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
     Item(
         id: 1,
-        name: "Team Bonding",
-        location: "Girgaon Mumbai",
+        name: "Shankar Shrivastav",
+        position: "General Manager",
         image:
-            "https://www.teammusic.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-11.38.45-AM.png"),
+            "https://www.lbsim.ac.in/images/director.jpg"),
   ];
 }
 
@@ -63,12 +63,12 @@ class Item {
   final int id;
   final String image;
   final String name;
-  final String location;
+  final String position;
 
   Item({
     required this.id,
     required this.name,
-    required this.location,
+    required this.position,
     required this.image,
   });
 }

@@ -86,11 +86,11 @@ class _CardPageState extends State<CardPage> {
                           ItemModel.items[index].image,
                         )),
                     title: Text(ItemModel.items[index].name),
-                    subtitle: Text(ItemModel.items[index].location),
+                    subtitle: Text(ItemModel.items[index].position),
                     trailing: InkWell(
                       child: Text(
-                        "Rate",
-                        textScaleFactor: 1.3,
+                        "Feedback",
+                        // textScaleFactor: 1.3,
                       ),
                       onTap: () => {
                         //go to rating page

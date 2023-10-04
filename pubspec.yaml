@@ -38,6 +38,8 @@ dependencies:
   firebase_core: ^2.17.0
   flutter_rating_bar: ^4.0.1
   toggle_switch: ^2.1.0
+  syncfusion_flutter_charts: ^23.1.39
+  fl_chart: ^0.62.0
 
 dev_dependencies:
   flutter_test:
