@@ -42,6 +42,31 @@ class _RatingPageState extends State<RatingPage> {
             SizedBox(
               height: 30,
             ),
+
+            Padding(
+              padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  Text(
+                    "Anonymous",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: 130,
+                  ),
+                  Switch(
+                    thumbIcon: thumbIcon,
+                    value: light1,
+                    onChanged: (bool value) {
+                      setState(() {
+                        light1 = value;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
             Text(
               "Rate Managment",
               style: TextStyle(fontSize: 20),
@@ -81,33 +106,6 @@ class _RatingPageState extends State<RatingPage> {
                     hintText: "Enter Feedback"),
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.symmetric(horizontal: 30),
-              child: Row(
-                children: [
-                  Text(
-                    "Anonymous",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  Switch(
-                    thumbIcon: thumbIcon,
-                    value: light1,
-                    onChanged: (bool value) {
-                      setState(() {
-                        light1 = value;
-                      });
-                    },
-                  ),
-                ],
-              ),
-            ),
-
             SizedBox(
               height: 20,
             ),

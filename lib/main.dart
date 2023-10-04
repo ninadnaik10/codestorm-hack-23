@@ -1,3 +1,5 @@
+import 'package:codestorm_hackathon/models/card_model.dart';
+import 'package:codestorm_hackathon/pages/cards_page.dart';
 import 'package:codestorm_hackathon/pages/rating_page.dart';
 import 'package:codestorm_hackathon/widgets/rating.dart';
 import 'package:flutter/material.dart';
@@ -15,15 +17,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     // Material App
     return MaterialApp(
-        theme: ThemeData(useMaterial3: true),
+        // theme: ThemeData(useMaterial3: true),
 
         // Scaffold Widget
-        home: RatingPage());
+        home:
+            Scaffold(body: RatingPage()));
   }
 }
 
