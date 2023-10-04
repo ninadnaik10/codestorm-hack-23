@@ -1,6 +1,28 @@
 import 'package:flutter/material.dart';
 
-class PostPage extends StatelessWidget {
+class PostPage extends StatefulWidget {
+
+
+  @override
+  State<PostPage> createState() => _PostPageState();
+}
+
+class _PostPageState extends State<PostPage> {
+  int likeCount = 0;
+
+  bool isLiked = false;
+
+  void _toggleLike() {
+    setState(() {
+      isLiked = !isLiked;
+      if (isLiked) {
+        likeCount++;
+      } else {
+        likeCount--;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +44,7 @@ class PostPage extends StatelessWidget {
       children: [
         // User Info Section
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal:8.0),
           child: Row(
             children: [
               Icon(
@@ -39,9 +61,7 @@ class PostPage extends StatelessWidget {
           ),
         ),
         // Post Image
-        Image.network(
-          'https://cdn.britannica.com/25/91925-050-8D47C039/kite-flight.jpg', // Replace with your image URL
-        ),
+        Image(image: AssetImage('images/helper_badge.png'),),
         // Like and Comment Section
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -50,9 +70,15 @@ class PostPage extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(Icons.favorite_border),
+                  InkWell(
+                    onTap: _toggleLike,
+                    child: Icon(
+                      isLiked ? Icons.favorite : Icons.favorite_border,
+                      color: isLiked ? Colors.red : null,
+                    ),
+                  ),
                   SizedBox(width: 8),
-                  Text('Like'),
+                  Text('Like $likeCount'),
                 ],
               ),
               Row(
