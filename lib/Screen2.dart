@@ -90,11 +90,7 @@ class _Screen2State extends State<Screen2>
               ),
             ),
       
-<<<<<<< Updated upstream
-            const SizedBox(height: 210),
-=======
             const SizedBox(height: 230),
->>>>>>> Stashed changes
   
       
             // const SizedBox(height: 4),
