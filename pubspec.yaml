@@ -68,16 +68,11 @@ flutter:
     - assets/images/Godrej_logo.png
     - assets/images/sf.png
     - assets/images/feedback.jpeg
-<<<<<<< Updated upstream
-    - assets/images/signup.png
-    - assets/images/google.png
-    - assets/images/linkedin.png
-=======
     - assets/images/calling.jpeg
     - assets/images/googleicon.png
     - assets/images/linkedinicon.png
->>>>>>> Stashed changes
     - assets/images/accenture.jpeg
+    - assets/images/signup.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

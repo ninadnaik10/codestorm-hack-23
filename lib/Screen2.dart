@@ -35,13 +35,11 @@ class _Screen2State extends State<Screen2>
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
 
-            Center(child: Image.asset('assets/images/calling.jpeg')),
-      
-            const SizedBox(height: 40),
+            const SizedBox(height: 40,),
             
             Center(child: Image.asset('assets/images/signup.png',height: 200,)),
 
-            const SizedBox(height: 20,),
+            const SizedBox(height: 40,),
             const Text(
               "    Choose Your Signup :",
               style: TextStyle(
@@ -90,11 +88,7 @@ class _Screen2State extends State<Screen2>
               ),
             ),
       
-            const SizedBox(height: 230),
-  
-      
-            // const SizedBox(height: 4),
-      
+            const SizedBox(height: 180),
              Row(
                children: [
                  Center(child: CupertinoButton(child: const Text("            Terms Of Service",style: TextStyle(fontSize: 18),), 
@@ -113,6 +107,6 @@ class _Screen2State extends State<Screen2>
         ),
       ),
 
-    );;
+    );
   }
 }

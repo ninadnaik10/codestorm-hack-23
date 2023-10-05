@@ -110,6 +110,6 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
         ),
       ),
 
-    );;
+    );
   }
 }
