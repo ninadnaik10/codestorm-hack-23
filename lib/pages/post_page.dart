@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class PostPage extends StatefulWidget {
-
-
   @override
   State<PostPage> createState() => _PostPageState();
 }
@@ -27,7 +25,7 @@ class _PostPageState extends State<PostPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Instagram Post'),
+        title: Text('Posts Page'),
       ),
       body: ListView(
         children: [
@@ -44,7 +42,7 @@ class _PostPageState extends State<PostPage> {
       children: [
         // User Info Section
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal:8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Row(
             children: [
               Icon(
@@ -61,7 +59,9 @@ class _PostPageState extends State<PostPage> {
           ),
         ),
         // Post Image
-        Image(image: AssetImage('images/helper_badge.png'),),
+        Image(
+          image: AssetImage('images/helper_badge.png'),
+        ),
         // Like and Comment Section
         Padding(
           padding: const EdgeInsets.all(8.0),

@@ -1,4 +1,4 @@
-// import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -12,11 +12,23 @@ class EmployeeComplaintPage extends StatefulWidget {
 }
 
 class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
+  TextEditingController _typeOfComplaintController = TextEditingController();
+  TextEditingController _respondentController = TextEditingController();
+  TextEditingController _descriptionController = TextEditingController();
+  TextEditingController _resolutionController = TextEditingController();
+
   handleSubmit() {
-    // logic to save data
+    // Logic to save data
+    String typeOfComplaint = _typeOfComplaintController.text;
+    String respondent = _respondentController.text;
+    String description = _descriptionController.text;
+    String resolution = _resolutionController.text;
+    // Use these variables as needed for saving data.
   }
 
-  bool light1 = true;
+  bool anonymous = true;
+  bool feedbackGiven = true;
+
   final MaterialStateProperty<Icon?> thumbIcon =
       MaterialStateProperty.resolveWith<Icon?>(
     (Set<MaterialState> states) {
@@ -26,13 +38,21 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
       return const Icon(Icons.close);
     },
   );
+
+  @override
+  void dispose() {
+    _typeOfComplaintController.dispose();
+    _respondentController.dispose();
+    _descriptionController.dispose();
+    _resolutionController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        // AppBar takes a Text Widget
-        // in it's title parameter
         title: const Text('Complaint Page'),
       ),
       body: SingleChildScrollView(
@@ -53,10 +73,10 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
                 ),
                 Switch(
                   thumbIcon: thumbIcon,
-                  value: light1,
+                  value: anonymous,
                   onChanged: (bool value) {
                     setState(() {
-                      light1 = value;
+                      anonymous = value;
                     });
                   },
                 ),
@@ -69,14 +89,15 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
+              controller: _typeOfComplaintController, // Use the controller here
               minLines: 1,
               maxLines: null,
               keyboardType: TextInputType.multiline,
               decoration: InputDecoration(
                   alignLabelWithHint: true,
                   border: OutlineInputBorder(),
-                  labelText: 'Type of Complain',
-                  hintText: "Type of Complain"),
+                  labelText: 'Type of Complaint',
+                  hintText: "Type of Complaint"),
             ),
           ),
           SizedBox(
@@ -85,30 +106,31 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
+              controller: _respondentController, // Use the controller here
               minLines: 1,
               maxLines: null,
               keyboardType: TextInputType.multiline,
               decoration: InputDecoration(
                   alignLabelWithHint: true,
                   border: OutlineInputBorder(),
-                  labelText: 'Complainee',
-                  hintText: "Complainee"),
+                  labelText: 'Respondent',
+                  hintText: "The person you want to complain about"),
             ),
           ),
-          // Text("Enter Feedback",style: TextStyle(fontSize: 20),),
           SizedBox(
             height: 20,
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
+              controller: _descriptionController, // Use the controller here
               minLines: 8,
               maxLines: null,
               keyboardType: TextInputType.multiline,
               decoration: InputDecoration(
                   alignLabelWithHint: true,
                   border: OutlineInputBorder(),
-                  labelText: 'Description of Complain',
+                  labelText: 'Description of Complaint',
                   hintText: "Enter Description"),
             ),
           ),
@@ -118,6 +140,7 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
+              controller: _resolutionController, // Use the controller here
               minLines: 8,
               maxLines: null,
               keyboardType: TextInputType.multiline,
@@ -125,7 +148,7 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
                   alignLabelWithHint: true,
                   border: OutlineInputBorder(),
                   labelText: 'Resolution Desired',
-                  hintText: "Enter resolution"),
+                  hintText: "Enter Resolution"),
             ),
           ),
           SizedBox(
@@ -136,7 +159,7 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
             child: Row(
               children: [
                 Text(
-                  "Have you given \nfeedback to the \nComplainee",
+                  "Have you given\nfeedback to the\nComplainee",
                   style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(
@@ -144,10 +167,10 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
                 ),
                 Switch(
                   thumbIcon: thumbIcon,
-                  value: light1,
+                  value: feedbackGiven,
                   onChanged: (bool value) {
                     setState(() {
-                      light1 = value;
+                      feedbackGiven = value;
                     });
                   },
                 ),
@@ -158,7 +181,9 @@ class _EmployeeComplaintPageState extends State<EmployeeComplaintPage> {
             height: 20,
           ),
           ElevatedButton(
-              onPressed: handleSubmit, child: Text("Report Complaint"))
+            onPressed: handleSubmit,
+            child: Text("Report Complaint"),
+          ),
         ]),
       ),
     );
