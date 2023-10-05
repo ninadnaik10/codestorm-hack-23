@@ -73,6 +73,7 @@ flutter:
     - assets/images/linkedinicon.png
     - assets/images/accenture.jpeg
     - assets/images/signup.png
+    - assets/images/graph.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

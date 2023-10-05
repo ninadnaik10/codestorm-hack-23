@@ -1,3 +1,4 @@
+import 'package:codestorm_hackathon/Screen2.dart';
 import 'package:codestorm_hackathon/screens/Homepage.dart';
 import "package:flutter/material.dart";
 import 'Givefeedback.dart';
@@ -122,7 +123,9 @@ class _DashboardState extends State<Dashboard> {
                 leading: Icon(Icons.logout_sharp),
                 onTap: () {
                   setState(() {
-                  
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => 
+                    const Screen2()));
                   });
                 },
               ),

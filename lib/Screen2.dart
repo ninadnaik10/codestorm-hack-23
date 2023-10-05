@@ -1,4 +1,5 @@
 import 'package:codestorm_hackathon/GsignupScreen.dart';
+import 'package:codestorm_hackathon/Organisation_Screens/org_registration.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -32,7 +33,7 @@ class _Screen2State extends State<Screen2>
               width: 400,
               color: Colors.deepPurple,
               child: const Center(child: Text("ACCENTURE SURVEY APP",
-              style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
+              style: TextStyle(fontSize: 25,color: Colors.white),)),
             ),
 
             const SizedBox(height: 40,),
@@ -81,7 +82,7 @@ class _Screen2State extends State<Screen2>
                 onPressed: (){
                   Navigator.of(context).push(MaterialPageRoute
                         (builder: (BuildContext context) =>
-                        const Google_signupScreen() ));
+                        const Org_registration() ));
                 },
                 child:const Text("Organization/Company Signup",
                 style: TextStyle(fontSize: 17,color: Colors.white),) ),

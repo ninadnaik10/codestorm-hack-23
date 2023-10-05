@@ -1,24 +1,16 @@
-import 'package:codestorm_hackathon/screens/dashboard.dart';
+import 'package:codestorm_hackathon/Organisation_Screens/HomeScreen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter/material.dart';
 
-class EmployeRegistrationPage extends StatefulWidget {
-  const EmployeRegistrationPage({super.key});
+class Org_registration extends StatefulWidget {
+  const Org_registration({super.key});
 
   @override
-  State<EmployeRegistrationPage> createState() => _EmployeRegistrationPageState();
+  State<Org_registration> createState() => _Org_registrationState();
 }
 
-class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
-  bool password = false;
-  @override
-  void initState()
-  {
-    super.initState();
-    password = true;
-  }
-
+class _Org_registrationState extends State<Org_registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +27,7 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
             const SizedBox(height:40),
       
             const Text(
-              "    Just a step away",
+              "    The Company Portal",
               style: TextStyle(
                 fontSize: 20,
               ),),
@@ -59,19 +51,7 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
               child: TextField(
                 decoration: InputDecoration(
                               prefixIcon: Icon(Icons.indeterminate_check_box),
-                              hintText: "Employee id*",
-                              border: OutlineInputBorder(),
-                              errorBorder: OutlineInputBorder(),
-                            ),
-              ),
-            ),
-
-            const Padding(
-              padding: EdgeInsets.all(12.0),
-              child: TextField(
-                decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.post_add),
-                              hintText: "Position in Company*",
+                              hintText: "Position In Company*",
                               border: OutlineInputBorder(),
                               errorBorder: OutlineInputBorder(),
                             ),
@@ -83,7 +63,7 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
               child: TextField(
                 decoration: InputDecoration(
                               prefixIcon: Icon(Icons.person_2_outlined),
-                              hintText: "Organization Id*",
+                              hintText: "Company Identification Number*",
                               border: OutlineInputBorder(),
                               errorBorder: OutlineInputBorder(),
                             ),
@@ -94,15 +74,15 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
               padding: EdgeInsets.all(12.0),
               child: TextField(
                 decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.email_outlined),
-                              hintText: "Email*",
+                              prefixIcon: Icon(Icons.location_city),
+                              hintText: "Branch Address*",
                               border: OutlineInputBorder(),
                               errorBorder: OutlineInputBorder(),
                             ),
               ),
             ),
       
-            const SizedBox(height: 170),
+            const SizedBox(height: 250),
       
            Padding(
               padding: const EdgeInsets.all(8.0),
@@ -116,7 +96,7 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
                 onPressed: (){
                   Navigator.of(context).push(MaterialPageRoute
                         (builder: (BuildContext context) =>
-                        const Dashboard() ));
+                        const Organisation_HomeScreen() ));
                 },
                 child:const Text("Proceed",
                 style: TextStyle(fontSize: 17,color: Colors.white),) ),
@@ -127,5 +107,5 @@ class _EmployeRegistrationPageState extends State<EmployeRegistrationPage> {
         ),
       ),
     );
-}
+  }
 }
