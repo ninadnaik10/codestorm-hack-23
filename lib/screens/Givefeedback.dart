@@ -16,7 +16,7 @@ class _GiveFeedbackState extends State<GiveFeedback>
     return Scaffold(
       body: ListView.builder(
         
-          itemCount: 6,
+          itemCount: 2,
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
                 leading: const Icon(Icons.list),

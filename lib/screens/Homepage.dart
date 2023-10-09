@@ -1,3 +1,5 @@
+import 'package:codestorm_hackathon/screens/rating.dart';
+import 'package:codestorm_hackathon/widgets/rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -18,6 +20,14 @@ class _HomepageState extends State<Homepage> {
           const SizedBox(height: 5,),
 
          Image.asset('assets/images/accenture.jpeg',height: 200,),
+
+        //  Container(
+        //       height: 150 ,
+        //       child: ListView.separated(
+        //       scrollDirection: Axis.horizontal,
+        //       itemBuilder: (context,index) =>Buildcard(),
+        //       separatorBuilder: (context, _) => SizedBox(width: 10,),
+        //       itemCount: 3)),
 
           Card(
             margin: EdgeInsets.all(10),
@@ -42,9 +52,11 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Text('Last Date: 7/10/2023'),
-                      const SizedBox(width: 100,),
+                      const SizedBox(width: 50,),
                       ElevatedButton(onPressed: (){
-
+                        Navigator.push(context, MaterialPageRoute
+                        (builder: (BuildContext context) =>
+                        const RatingPage() ));
                       }, child: Text('Begin Survey'))
                     ],
                   ),
@@ -78,7 +90,7 @@ class _HomepageState extends State<Homepage> {
                    Row(
                     children: [
                       Text('Last Date: 7/10/2023'),
-                      const SizedBox(width: 100,),
+                      const SizedBox(width: 50,),
                       ElevatedButton(onPressed: (){
 
                       }, child: Text('Begin Survey'))
@@ -112,7 +124,7 @@ class _HomepageState extends State<Homepage> {
                   Row(
                     children: [
                       Text('Last Date: 7/10/2023'),
-                      const SizedBox(width: 90,),
+                      const SizedBox(width: 50,),
                       ElevatedButton(onPressed: (){
 
                       }, child: Text('Give Feedback'))
@@ -129,28 +141,28 @@ class _HomepageState extends State<Homepage> {
 }
 
 // ignore: non_constant_identifier_names
-Widget Buildcard(
+// Widget Buildcard(
   
-) => Container(
-  margin: EdgeInsets.only(left: 20,bottom: 10),
-                    decoration: BoxDecoration
-                (
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 222, 185, 197),
-                ),
-                  width: 350,
-                  child: Column(
-                    children: [
-                      Expanded(
-                      child: AspectRatio(
-                        aspectRatio: 4/2,
-                        child: ClipRRect(borderRadius: BorderRadius.circular(10),
+// ) => Container(
+//   margin: EdgeInsets.only(left: 20,bottom: 10),
+//                     decoration: BoxDecoration
+//                 (
+//                   borderRadius: BorderRadius.circular(10),
+//                   color: Color.fromARGB(255, 222, 185, 197),
+//                 ),
+//                   width: 350,
+//                   child: Column(
+//                     children: [
+//                       Expanded(
+//                       child: AspectRatio(
+//                         aspectRatio: 4/2,
+//                         child: ClipRRect(borderRadius: BorderRadius.circular(10),
                         
-                        ),  
-                    ),
-                  )]
-                  ),
-);
+//                         ),  
+//                     ),
+//                   )]
+//                   ),
+// );
 
-class CardItem {
-}
+// class CardItem {
+// }

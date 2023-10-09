@@ -1,7 +1,11 @@
 import 'package:codestorm_hackathon/Screen2.dart';
 import 'package:codestorm_hackathon/screens/Homepage.dart';
+import 'package:codestorm_hackathon/screens/create_post.dart';
 import "package:flutter/material.dart";
+import '../screens/cards_page.dart';
+import '../screens/post_page.dart';
 import 'Givefeedback.dart';
+import 'emp_com.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -20,19 +24,12 @@ class _DashboardState extends State<Dashboard> {
     //   style: optionStyle,
     // ),
     Homepage(),
-    GiveFeedback(),
-   Text(
-      'Index 0: Feedback received',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 0: Complaint Box',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 0: Settings',
-      style: optionStyle,
-    ),
+    CardPage(),
+    CreatePostPage(),
+    PostPage(),
+        CardPage(),
+    RatingPage(),
+    RatingPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -136,25 +133,26 @@ class _DashboardState extends State<Dashboard> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home,color: Colors.green,),
+            icon: Icon(Icons.home,color: Colors.black,),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.feedback,color: Colors.green),
+            icon: Icon(Icons.feedback,color: Colors.black),
             label: 'Give Feedback',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.feedback_sharp,color: Colors.green),
-            label: 'Receive feedback',
+            icon: Icon(Icons.post_add,color: Colors.black),
+            label: 'Write Post',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.compare,color:Colors.green,),
-            label: 'Lets Complain',
+            icon: Icon(Icons.feed,color:Colors.black,),
+            label: 'Posts',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings,color:Colors.green,),
-            label: 'Settings',
+            icon: Icon(Icons.feedback,color:Colors.black,),
+            label: 'Complain',
           ),
+          
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],

@@ -1,43 +1,23 @@
-import 'package:codestorm_hackathon/Registrationpage.dart';
+import 'package:codestorm_hackathon/screens/GsignupScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
-class Google_signupScreen extends StatefulWidget {
-  const Google_signupScreen({super.key});
+import 'Registrationpage.dart';
+
+class Screen2 extends StatefulWidget 
+{
+  const Screen2({super.key});
 
   @override
-  State<Google_signupScreen> createState() => _Google_signupScreenState();
+  State<Screen2> createState() => _Screen2State();
 }
 
-class _Google_signupScreenState extends State<Google_signupScreen> {
-
-  final GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: [
-      'email',
-    ],
-  );
+class _Screen2State extends State<Screen2> 
+{
   @override
   Widget build(BuildContext context) {
-     Future<void> _handleSignIn() async {
-      try {
-        await _googleSignIn.signIn();
-        if (_googleSignIn.currentUser != null) {
-          print("Hell");
-        //   final userProvider =
-        //       Provider.of<UserProvider>(context, listen: false);
-        //   userProvider.setUser(User(
-        //       name: _googleSignIn.currentUser!.displayName ?? "",
-        //       email: _googleSignIn.currentUser!.email,
-        //       id: _googleSignIn.currentUser!.id));
-        // }
-        // ;
-      }} catch (error) {
-        print(error);
-      }
-    }
     return Scaffold(
 
       body: 
@@ -51,13 +31,22 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
               height: 100,
               width: 400,
               color: Colors.deepPurple,
-              child: const Center(child: Text("SURVEY APPLICATION",
+              child: const Center(child: Text("ACCENTURE SURVEY APP",
               style: TextStyle(fontSize: 25,color: Colors.greenAccent),)),
             ),
+
+            const SizedBox(height: 40,),
+            
+            Center(child: Image.asset('assets/images/signup.png',height: 200,)),
+
+            const SizedBox(height: 40,),
+            const Text(
+              "    Choose Your Signup :",
+              style: TextStyle(
+                fontSize: 20,
+              ),),
       
-            const SizedBox(height: 20),
-      
-              const SizedBox(height: 220),
+              const SizedBox(height: 30),
       
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -69,18 +58,16 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
                     backgroundColor: Colors.deepPurple,
                   ),
                 onPressed: (){
-                  _handleSignIn();
                   Navigator.of(context).push(MaterialPageRoute
                         (builder: (BuildContext context) =>
-                        const EmployeRegistrationPage() ));
+                        const Google_signupScreen() ));
                 },
-                child:const Text("Signup Using Google",
+                child:const Text("Employee Signup",
                 style: TextStyle(fontSize: 17,color:Colors.white),) ),
               ),
             ),
       
             const SizedBox(height: 20),
-
 
              Padding(
               padding: const EdgeInsets.all(8.0),
@@ -94,29 +81,14 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
                 onPressed: (){
                   Navigator.of(context).push(MaterialPageRoute
                         (builder: (BuildContext context) =>
-                        const EmployeRegistrationPage() ));
+                        const Google_signupScreen() ));
                 },
-                child:const Text("Signup Using LinkedIn",
+                child:const Text("Organization/Company Signup",
                 style: TextStyle(fontSize: 17,color: Colors.white),) ),
               ),
             ),
-            const SizedBox(height: 30,),
-
-
-            Row(
-              children: [
-                const SizedBox(width: 150,),
-                Image.asset('assets/images/googleicon.png',width: 44,),
-                const SizedBox(width: 15,),
-                Image.asset('assets/images/linkedinicon.png',width: 44,),
-              ],
-            ),
       
-            const SizedBox(height: 210),
-  
-      
-            // const SizedBox(height: 4),
-      
+            const SizedBox(height: 180),
              Row(
                children: [
                  Center(child: CupertinoButton(child: const Text("            Terms Of Service",style: TextStyle(fontSize: 18),), 

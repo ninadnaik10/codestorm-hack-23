@@ -1,9 +1,8 @@
-import 'package:codestorm_hackathon/Registrationpage.dart';
+import 'package:codestorm_hackathon/screens/Registrationpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class Google_signupScreen extends StatefulWidget {
   const Google_signupScreen({super.key});
@@ -13,31 +12,8 @@ class Google_signupScreen extends StatefulWidget {
 }
 
 class _Google_signupScreenState extends State<Google_signupScreen> {
-
-  final GoogleSignIn _googleSignIn = GoogleSignIn(
-    scopes: [
-      'email',
-    ],
-  );
   @override
   Widget build(BuildContext context) {
-     Future<void> _handleSignIn() async {
-      try {
-        await _googleSignIn.signIn();
-        if (_googleSignIn.currentUser != null) {
-          print("Hell");
-        //   final userProvider =
-        //       Provider.of<UserProvider>(context, listen: false);
-        //   userProvider.setUser(User(
-        //       name: _googleSignIn.currentUser!.displayName ?? "",
-        //       email: _googleSignIn.currentUser!.email,
-        //       id: _googleSignIn.currentUser!.id));
-        // }
-        // ;
-      }} catch (error) {
-        print(error);
-      }
-    }
     return Scaffold(
 
       body: 
@@ -69,7 +45,6 @@ class _Google_signupScreenState extends State<Google_signupScreen> {
                     backgroundColor: Colors.deepPurple,
                   ),
                 onPressed: (){
-                  _handleSignIn();
                   Navigator.of(context).push(MaterialPageRoute
                         (builder: (BuildContext context) =>
                         const EmployeRegistrationPage() ));
