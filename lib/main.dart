@@ -28,9 +28,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // Material App
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
 
         // Scaffold Widget
-        home:CreatePostPage());
+        home: PostPage());
   }
 }
